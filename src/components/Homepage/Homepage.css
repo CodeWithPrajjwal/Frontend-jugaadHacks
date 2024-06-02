@@ -1,0 +1,108 @@
+/* Homepage.css */
+
+body {
+    background-color: #f0f2f5; 
+}
+
+.homepage {
+    display: flex; /* Center content vertically and horizontally */
+    min-height: 100vh; /* Ensure full viewport height *//* Light background */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+  }
+
+  .hero-image {
+    position: absolute;
+    z-index: -1;
+    width: 35%;
+    height: auto;
+    right: 30px;
+    top: 30px;
+    animation: updown 2s ease-in-out infinite;
+
+  }
+  
+  .hero {
+    flex: 1; /* Occupy full available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Center content vertically */
+    align-items: left; /* Center content horizontally */
+    padding: 5rem; /* Spacing around content */
+    /* background-image: url("path/to/your/background.jpg"); Replace with your background image */
+    background-size: cover; /* Cover entire viewport */
+    background-position: center; /* Center background image */
+  }
+  
+  .hero-container {
+    max-width: 700px; /* Limit container width for responsiveness */
+    text-align: left; /* Center text within container */
+  }
+  
+  .hero-title {
+    margin-bottom: 1rem; /* Space below title */
+  }
+  
+  .logo {
+    font-size: 3rem; /* Adjust logo font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Darker color for logo */
+  }
+  
+  .hero-tagline {
+    font-size: 2rem; /* Larger font for tagline */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #222; /* Darker color for readability */
+    margin-bottom: 1.5rem; /* Space below tagline */
+  }
+  
+  .hero-description {
+    font-size: 1.1rem; /* Readable description font size */
+    color: #666; /* Subdued color for description */
+    line-height: 1.5; /* Improve readability with line spacing */
+    margin-bottom: 2rem; /* Space below description */
+  }
+  
+  .hero-button {
+    background-color: #4CAF50; /* Green button color */
+    color: white; /* White text color */
+    padding: 1rem 2rem; /* Button padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1rem; /* Button text size */
+    cursor: pointer; /* Indicate clickable button */
+    transition: all 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .hero-button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  /* Media queries for responsiveness (adjust breakpoints as needed) */
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      max-width: 90%; /* Adjust container width for smaller screens */
+    }
+  
+    .hero-title, .hero-tagline, .hero-description {
+      font-size: 1.2rem; /* Adjust font sizes for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-container {
+      max-width: 100%; /* Container takes full width on very small screens */
+    }
+  }
+  
+  @keyframes updown {
+    0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }
