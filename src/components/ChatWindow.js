@@ -2,6 +2,7 @@ import React, { useState, useEffect , useRef} from 'react';
 import styled from 'styled-components';
 import Message from './Message';
 import FormattedResponse from './FormattedResponse';
+import Popup_single from './popup/Popup_single';
 
 const ChatContainer = styled.div`
   flex: 1;
@@ -56,6 +57,7 @@ const ChatWindow = ({ loading, prompt, result }) => {
 
   return (
     <ChatContainer>
+      <Popup_single/>
       {mergedArray.map((item, index) => (
         item.isUser
         ? <Message key={index} isUser={item.isUser} text={item.text} />

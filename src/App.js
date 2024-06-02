@@ -21,7 +21,7 @@ const App = () => {
     if (fetch) {
       setLoading(true);
       axios
-        .post(` https://jugaad-hacks-v1-0.onrender.com/chat`, {
+        .post(`http://127.0.0.1:5000/chat`, {
           prompt: prompt,
           new_chat: true,
         })
