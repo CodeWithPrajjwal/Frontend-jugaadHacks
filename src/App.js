@@ -7,7 +7,6 @@ import './App.css';
 import {Routes , BrowserRouter,Route} from 'react-router-dom';
 import Popup from './components/popup/popup';
 import Homepage from './components/Homepage/Homepage';
-import { API_BASE_URL } from './config';
 
 
 const App = () => {
@@ -22,7 +21,7 @@ const App = () => {
     if (fetch) {
       setLoading(true);
       axios
-        .post(`${API_BASE_URL}/chat`, {
+        .post(` https://jugaad-hacks-v1-0.onrender.com/chat`, {
           prompt: prompt,
           new_chat: true,
         })
