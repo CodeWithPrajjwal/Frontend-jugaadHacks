@@ -17,12 +17,12 @@ const Popup_single = () => {
     <div className="popup-overlay">
       <div className="popup-content">
         <div className="popup-message">
-          Hosted on a free tier server, first response can take upto 60 seconds. Please be patient.
+          Hosted on a free tier server, first response may take upto 60 seconds. Please be patient.
         </div>
         <div className="popup-buttons">
             
           <button onClick={handleClose} className="popup-button">
-            ok, i will be patient
+            Close Popup
           </button>
           
           {/* <button onClick={handleClose} className="popup-button">

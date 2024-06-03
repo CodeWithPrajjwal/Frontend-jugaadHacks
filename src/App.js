@@ -17,15 +17,24 @@ const App = () => {
   const[loading, setLoading] = useState(false);
   const[showPopup, setShowPopup] = useState(false);
 
+  const urls = [
+    'https://jugaad-hacks-v1-0.onrender.com/chat',
+    // 'https://jugaad-hacks-v1-0.onrender.com:5000/chat',
+    'http://18.142.128.26:5000/chat',
+    'http://54.254.162.138:5000/chat'
+  ];
+  
+
   useEffect(() => {
     if (fetch) {
       setLoading(true);
-      axios
-        .post(`http://127.0.0.1:5000/chat`, {
+      // for(let url of urls){
+      axios.post('https://jugaad-hacks-v1-0.onrender.com/chat',  {
           prompt: prompt,
           new_chat: true,
         })
         .then((response) => {
+          console.log('Response from backend: ', response);
           setResult(response.data.result);
           setSummary(response.data.summary);
           setFetch(false);
@@ -35,7 +44,8 @@ const App = () => {
           console.log('Error from backend: ', error);
           setFetch(false);
         });
-    }
+      }
+    // }
   }, [fetch,loading, prompt]);
 
 
